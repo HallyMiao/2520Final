@@ -1,4 +1,7 @@
 const express = require("express");
+const hbs = require('hbs');
+
+const port = process.env.PORT || 8080;
 
 var app = express();
 
@@ -15,6 +18,6 @@ app.get('/404', (request, response) => {
 	})
 });
 
-app.listen(8080, () => {
-	console.log("Server is up on the port 8080");
+app.listen(port, () => {
+	console.log(`Server is up on the port ${port}`);
 });
